@@ -516,7 +516,7 @@ import Product2 from "../assets/Product2.webp";
 import Product3 from "../assets/product3.webp";
 import Product4 from "../assets/Product4.webp";
 import Product5 from "../assets/product5.webp";
-// import Product6 from "../assets/Product6.webp";
+import Product6 from "../assets/Product6.webp";
 import Product7 from "../assets/product7.webp";
 import Product8 from "../assets/product8.webp";
 import Product9 from "../assets/product9.webp";
@@ -529,132 +529,162 @@ import { useState } from "react";
 const dummyProducts = [
   {
     id: 1,
-    title: "PowerMax 10000",
+    title: "Power Banks",
     desc: "Compact 10000mAh power bank with fast charging support and dual USB output.",
     image: Product1,
     variants: [
+      { type: "Standard/USB", price: 800 },
       { type: "USB-A + USB-C", price: 1299 },
+      { type: "High Capacity", price: 1500 },
       { type: "Wireless Charging", price: 1699 },
+      { type: "Laptop Power Bank", price: 2000 },
     ],
   },
   {
     id: 2,
-    title: "EcoGlow Lamp",
+    title: "Electric Lamps",
     desc: "Rechargeable LED lamp powered by solar energy. Ideal for outdoor and indoor use.",
     image: Product2,
     variants: [
+      { type: "Incandescent Lamp", price: 200 },
+      { type: "Halogen Lamp", price: 300 },
+      { type: "LED Lamp", price: 500 },
       { type: "Table Lamp", price: 799 },
       { type: "Hanging Lantern", price: 999 },
     ],
   },
   {
     id: 3,
-    title: "Urban Glide",
+    title: "Electric Two Wheelers",
     desc: "Lightweight electric scooter with a foldable frame, 25km range, and digital display.",
     image: Product3,
     variants: [
-      { type: "Single Battery", price: 23999 },
-      { type: "Dual Battery", price: 27999 },
+      { type: "Low-Speed/Low-Range", price: 29999 },
+      { type: "High-Speed/High-Range", price: 39999 },
+      { type: "Lead-Acid Battery", price: 39999 },
+      { type: "Lithium-Ion Battery", price: 70999 },
     ],
   },
   {
     id: 4,
-    title: "SolarSound Pro",
+    title: "Electric Speakers",
     desc: "Bluetooth speaker with solar charging,and 8-hour battery backup.",
     image: Product4,
     variants: [
+      { type: "Wired Speakers", price: 1099 },
+      { type: "Wireless Speakers", price: 1299 },
       { type: "Outdoor Edition", price: 1699 },
       { type: "Bass Boost Edition", price: 2199 },
     ],
   },
   {
     id: 5,
-    title: "Ayudh Battery",
-    desc: "Lithium-ion battery for electric cars with high efficiency and thermal protection.",
+    title: "Lithium Batteries",
+    desc: "Lithium battery for electric cars with high efficiency and thermal protection.",
     image: Product5,
     variants: [
       { type: "2kWh Pack", price: 27999 },
       { type: "3kWh Pack", price: 34999 },
+      { type: "4kWh Pack", price: 38999 },
+      { type: "5kWh Pack", price: 40999 },
     ],
   },
-  // {
-  //   id: 6,
-  //   title: "Ayudh battery",
-  //   desc: "Compact lithium-ion battery for electric bicycles and home inverters.",
-  //   image: Product6,
-  //   variants: [
-  //     { type: "E-Bike Compatible", price: 6999 },
-  //     { type: "Home Inverter", price: 8999 },
-  //   ],
-  // },
+  {
+    id: 6,
+    title: "Lithium Ion Batteries",
+    desc: "Compact lithium-ion battery for electric bicycles and home inverters.",
+    image: Product6,
+    variants: [
+      { type: "2 kWh", price: 15000 },
+      { type: "3 kWh", price: 25000 },
+      { type: "4 kWh", price: 36999 },
+      { type: "8 kWh", price: 46999 },
+    ],
+  },
   {
     id: 7,
     title: "Electric Bicycle",
     desc: "Pedal-assisted e-bicycle with lithium battery, 50km range, and disc brakes.",
     image: Product7,
     variants: [
-      { type: "City Commuter", price: 22999 },
-      { type: "Mountain Terrain", price: 27999 },
+      { type: "Low-Speed E-Bikes", price: 28999 },
+      { type: "Hybrid E-Bikes", price: 45000 },
+      { type: "City Commuter", price: 51999 },
+      { type: "Mountain Terrain", price: 54999 },
     ],
   },
-  {
-    id: 8,
-    title: "Chetak Electric scooter",
-    desc: "Electric two-wheeler with stylish design, 90km range, and regenerative braking.",
-    image: Product8,
-    variants: [
-      { type: "Urbane", price: 114999 },
-      { type: "Premium", price: 124999 },
-    ],
-  },
+  // {
+  //   id: 8,
+  //   title: "Chetak Electric scooter",
+  //   desc: "Electric two-wheeler with stylish design, 90km range, and regenerative braking.",
+  //   image: Product8,
+  //   variants: [
+  //     { type: "Urbane", price: 114999 },
+  //     { type: "Premium", price: 124999 },
+  //   ],
+  // },
   {
     id: 9,
-    title: "Ampere Electric Scooter",
-    desc: "Affordable electric scooter with removable battery and 70–90 km range.",
+    title: "Electric MotorCycles",
+    desc: "electric scooter with removable battery and 70–90 km range.",
     image: Product9,
     variants: [
-      { type: "Magnus EX", price: 104900 },
-      { type: "Zeal EX", price: 94900 },
+      { type: "Commuter", price: 85000 },
+      { type: "SportsBike", price: 98900 },
+      { type: "Cruiser", price: 125900 },
+      { type: "Adventure", price: 194900 },
     ],
   },
   {
     id: 10,
-    title: "Mahindra electric Rickshaw",
+    title: "Electric Tricycles",
     desc: "Three-wheeler electric rickshaw with durable chassis and 120 km per charge.",
     image: Product10,
     variants: [
       { type: "Cargo", price: 149000 },
+      { type: "Mobility", price: 125000 },
+      { type: "Folding", price: 132000 },
       { type: "Passenger", price: 179000 },
     ],
   },
   {
     id: 11,
-    title: "Tata Nexon EV electric car",
+    title: "Electric cars",
     desc: "electric SUV with Ziptron technology, 312–465 km range and fast charging.",
     image: Product11,
     variants: [
-      { type: "Prime (Medium Range)", price: 1499000 },
-      { type: "Max (Long Range)", price: 1799000 },
+      { type: "HatchBacks", price: 1499000 },
+      { type: "Sedans", price: 1899000 },
+      { type: "SUVs", price: 2259000 },
+      { type: "Prime (Medium Range)", price: 4499000 },
+      { type: "Max (Long Range)", price: 7799000 },
     ],
   },
   {
     id: 12,
-    title: "Electric Truck",
+    title: "Commercial vehicles",
     desc: "Heavy-duty electric truck with 200km range and smart fleet tracking support.",
     image: Product12,
     variants: [
-      { type: "6-Wheel", price: 1699999 },
-      { type: "10-Wheel", price: 2399999 },
+      { type: "Light Commercial", price: 2699999 },
+      { type: "Heavy Commercial", price: 4699999 },
+      { type: "6 Wheel", price: 6699999 },
+      { type: "10 Wheel", price: 8399999 },
     ],
   },
   {
     id: 13,
-    title: "Electric Bus",
+    title: "Heavy Duty Machineries",
     desc: "Zero-emission electric bus ideal for city transit, 200–300 km per charge.",
     image: Product13,
     variants: [
-      { type: "Standard City", price: 3999999 },
-      { type: "Long Range", price: 4699999 },
+      { type: "Forklifts", price: 3999999 },
+      { type: "Excavators", price: 15000000 },
+      { type: "Loaders", price: 12000000 },
+      { type: "Dump Trucks", price: 30000000 },
+      { type: "Cranes", price: 20000000 },
+      { type: "Tractors", price: 8000000 },
+      { type: "Mining", price: 50000000 },
     ],
   },
 ];
@@ -700,7 +730,7 @@ const Products = () => {
         aria-labelledby="featured-products-title"
       >
         <span id="featured-products-title" className="text-xl">
-          Featured Products
+          Featured Categories
         </span>
         <div className="flex gap-2">
           <div className="swiper-button-prev-custom text-green-400 cursor-pointer text-xl">
@@ -745,7 +775,7 @@ const Products = () => {
                   <h4 className="font-semibold text-xl mb-1">
                     {product.title}
                   </h4>
-                  <p className="text-base font-semibold text-gray-400 mb-2">
+                  <p className="text-sm sm:text-base font-semibold text-gray-400 mb-2">
                     {product.desc}
                   </p>
                 </div>

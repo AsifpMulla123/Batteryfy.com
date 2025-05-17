@@ -20,13 +20,8 @@ const Batteryfy = () => {
           What is Batteryfy?
         </h1>
         <p className="text-lg text-center">
-          <span>
-            Our revolutionary platform offers three integrated solutions to
-            power the future of
-          </span>
-          <span className="inline sm:block text-center">
-            sustainable transportation.
-          </span>
+          Our revolutionary platform offers three integrated solutions to power
+          the future of sustainable mobility.
         </p>
       </div>
 

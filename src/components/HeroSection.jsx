@@ -15,31 +15,31 @@ const HeroSection = () => {
       points: ["Batteryfy manual bicycles", "Charge bicycles"],
     },
     {
-      title: "2 Wheelers",
+      title: "Motorcycles",
       description: "Retrofit petrol two-wheelers to EV",
       imageUrl: image2,
       points: ["Batteryfy manual 2 Wheelers", "Charge 2 Wheelers"],
     },
     {
-      title: "3-Wheelers",
+      title: "TriCycles",
       description: "Aftermarket EV retrofitting for cars",
       imageUrl: image3,
       points: ["Batteryfy manual 3 Wheelers", "Charge 3 Wheelers"],
     },
     {
-      title: "4 Wheelers",
+      title: "Cars",
       description: "Convert trucks and heavy vehicles",
       imageUrl: image4,
       points: ["Batteryfy manual 4 Wheelers", "Charge 4 Wheelers"],
     },
     {
-      title: "6 Wheelers",
+      title: "Commercial vehicles",
       description: "Aftermarket EV retrofitting for cars",
       imageUrl: image5,
       points: ["Batteryfy manual 6 Wheelers", "Charge 6 Wheelers"],
     },
     {
-      title: "Heavy Duty Vehicles",
+      title: "Heavy Duty Machineries",
       description: "Convert trucks and heavy vehicles",
       imageUrl: image6,
       points: [
@@ -93,7 +93,7 @@ const HeroSection = () => {
                 >
                   {card.title}
                 </h3>
-                {card.points.length > 0 && (
+                {/* {card.points.length > 0 && (
                   <ul className="list-disc space-y-2 flex justify-center items-center flex-col text-center">
                     {card.points.map((point, pointIndex) => (
                       <li key={pointIndex} className="text-white font-light">
@@ -101,7 +101,7 @@ const HeroSection = () => {
                       </li>
                     ))}
                   </ul>
-                )}
+                )} */}
                 <div className="flex justify-center gap-6 w-full">
                   <Link
                     to="/battery-conversion"
