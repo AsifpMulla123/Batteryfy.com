@@ -515,15 +515,15 @@ import Product1 from "../assets/Product1.webp";
 import Product2 from "../assets/Product2.webp";
 import Product3 from "../assets/product3.webp";
 import Product4 from "../assets/Product4.webp";
-import Product5 from "../assets/Product5.webp";
-import Product6 from "../assets/Product6.webp";
-import Product7 from "../assets/Product7.webp";
-import Product8 from "../assets/Product8.webp";
-import Product9 from "../assets/Product9.webp";
-import Product10 from "../assets/Product10.webp";
-import Product11 from "../assets/Product11.webp";
-import Product12 from "../assets/Product12.webp";
-import Product13 from "../assets/Product13.webp";
+import Product5 from "../assets/product5.webp";
+// import Product6 from "../assets/Product6.webp";
+import Product7 from "../assets/product7.webp";
+import Product8 from "../assets/product8.webp";
+import Product9 from "../assets/product9.webp";
+import Product10 from "../assets/product10.webp";
+import Product11 from "../assets/product11.webp";
+import Product12 from "../assets/product12.webp";
+import Product13 from "../assets/product13.webp";
 import { useState } from "react";
 
 const dummyProducts = [
