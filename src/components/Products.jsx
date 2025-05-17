@@ -516,7 +516,7 @@ import Product2 from "../assets/Product2.webp";
 import Product3 from "../assets/product3.webp";
 import Product4 from "../assets/Product4.webp";
 import Product5 from "../assets/product5.webp";
-import Product6 from "../assets/Product6.webp";
+import Product6 from "../assets/product6.webp";
 import Product7 from "../assets/product7.webp";
 import Product8 from "../assets/product8.webp";
 import Product9 from "../assets/product9.webp";
